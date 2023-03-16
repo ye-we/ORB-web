@@ -1,31 +1,13 @@
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import React from "react";
+import React, { useState } from "react";
 import SlideShower from "../components/SlideShower";
 import "react-tabs/style/react-tabs.css";
 
 const Actions = () => {
-  const approvedStudents = [
-    {
-      name: "Kalkidan Eshetu",
-      grade: "Amharic 11",
-      img: "/kal.jpg",
-      id: "s-1678680690929",
-      father: "Eshetu Tufa",
-      phoneNumber: "0911033253",
-      location: "Bishoftu",
-      parentImg: "/father.jpg",
-    },
-    {
-      name: "Fenet gossa",
-      grade: "Afaan Oromo 9",
-      img: "/fenet.jpg",
-      id: "s-1678680690929",
-      father: "Gossa Hunde",
-      phoneNumber: "0978786426",
-      location: "Ambo",
-      parentImg: "/father.jpg",
-    },
-  ];
+  const [approvedStudents, setApprovedStudents] = useState([]);
+  const approve = (newStudent) => {
+    setApprovedStudents((cur) => [...cur, newStudent]);
+  };
   return (
     <div className="p-5">
       <Tabs forceRenderTabPanel defaultIndex={1}>
@@ -36,12 +18,12 @@ const Actions = () => {
 
         <TabPanel>
           <div className="bg-[#fbfbfb] h-[85vh]">
-            <SlideShower />
+            <SlideShower onApprove={approve} />
           </div>
         </TabPanel>
         <TabPanel>
           <div>
-            {approvedStudents.map((student) => (
+            {approvedStudents?.map((student) => (
               <div className="flex justify-around w-[500px] p-3 shadow-lg m-auto mb-4">
                 <img
                   src={`${student.img}`}

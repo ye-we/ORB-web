@@ -16,7 +16,7 @@ const studentsInit = [
     name: "Fenet gossa",
     grade: "9",
     img: "/fenet.jpg",
-    id: "s-1678680690929",
+    id: "s-1678680690129",
     father: "Gossa Hunde",
     phoneNumber: "0978786426",
     location: "Ambo",
@@ -27,7 +27,7 @@ const studentsInit = [
     name: "Emebet Haylu",
     grade: "4",
     img: "/emebet.jpg",
-    id: "s-1678680690929",
+    id: "s-1612680690929",
     father: "wibit mekonen",
     phoneNumber: "0978786426",
     location: "Ambo",
@@ -35,7 +35,7 @@ const studentsInit = [
   },
 ];
 
-const SlideShower = () => {
+const SlideShower = (props) => {
   const settings = {
     dots: true,
     infinite: true,
@@ -48,7 +48,10 @@ const SlideShower = () => {
     let newStudentsList = students.filter(
       (student) => student.id !== studentId
     );
+    let approvedStudent = students.find((student) => student.id === studentId);
+    console.log(newStudentsList);
     setStudents(newStudentsList);
+    props.onApprove(approvedStudent);
   };
   return (
     <div className="w-[90%] h-[80%] m-auto">
@@ -125,6 +128,24 @@ const SlideShower = () => {
                   </div>
                 </div>
               </div>
+            </div>
+            <div className="flex mt-5">
+              <button
+                className="p-2 mr-3 bg-green-500 text-white rounded-lg"
+                onClick={() => {
+                  handleStudent(student.id);
+                }}
+              >
+                Approve
+              </button>
+              <button
+                className="p-2 mr-3 bg-red-500 text-white rounded-lg"
+                onClick={() => {
+                  handleStudent(student.id);
+                }}
+              >
+                Deny
+              </button>
             </div>
           </div>
         ))}
