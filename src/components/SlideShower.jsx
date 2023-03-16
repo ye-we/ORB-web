@@ -13,12 +13,13 @@ const SlideShower = () => {
   const students = [
     {
       name: "Kalkidan Eshetu",
-      grade: 11,
+      grade: "Amharic 11",
       img: "/kal.jpg",
       id: "s-1678680690929",
       father: "Eshetu Tufa",
       phoneNumber: "0911033253",
       location: "Bishoftu",
+      parentImg: "/father.jpg",
     },
     {
       name: "Fenet gossa",
@@ -28,6 +29,18 @@ const SlideShower = () => {
       father: "Gossa Hunde",
       phoneNumber: "0978786426",
       location: "Ambo",
+      parentImg: "/father.jpg",
+    },
+
+    {
+      name: "Emebet Haylu",
+      grade: "Amharic 4",
+      img: "/emebet.jpg",
+      id: "s-1678680690929",
+      father: "Gossa Hunde",
+      phoneNumber: "0978786426",
+      location: "Ambo",
+      parentImg: "/mom.jpg",
     },
   ];
   return (
@@ -84,7 +97,7 @@ const SlideShower = () => {
                 <div className="flex flex-col h-[70vh]">
                   <div className="flex">
                     <img
-                      src={`/father.jpg`}
+                      src={`${student.parentImg}`}
                       className="w-[80px] h-[80px] object-cover rounded-full mr-3"
                     />
                     <div className="flex-1">
