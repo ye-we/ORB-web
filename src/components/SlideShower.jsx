@@ -20,19 +20,19 @@ const SlideShower = () => {
               <div className="flex flex-col h-[70vh]">
                 <div className="flex">
                   <img
-                    src="https://placehold.co/600x400"
+                    src="/kal.jpg"
                     className="w-[80px] h-[80px] object-cover rounded-full mr-3"
                   />
                   <div className="flex-1">
-                    <h1>Student Name</h1>
-                    <h3>age</h3>
-                    <h3>id</h3>
+                    <h1>Kalkidan Eshetu</h1>
+                    <h3>G - 11</h3>
+                    <h3>Id: s-1678680690929</h3>
                   </div>
                 </div>
                 <div className="flex-1 flex mt-3">
                   <div className="h-[100%]">
                     <img
-                      src="https://placehold.co/600x400"
+                      src="/report.jpg"
                       className="w-[160px] h-[70%] object-cover mr-3"
                     />
 
@@ -40,7 +40,7 @@ const SlideShower = () => {
                   </div>
                   <div className="h-[100%]">
                     <img
-                      src="https://placehold.co/600x400"
+                      src="/ministry.jpg"
                       className="w-[160px] h-[70%] object-cover mr-3"
                     />
 
@@ -48,7 +48,7 @@ const SlideShower = () => {
                   </div>
                   <div className="h-[100%]">
                     <img
-                      src="https://placehold.co/600x400"
+                      src="/transcript.jpg"
                       className="w-[160px] h-[70%] object-cover mr-3"
                     />
 
@@ -62,39 +62,23 @@ const SlideShower = () => {
               <div className="flex flex-col h-[70vh]">
                 <div className="flex">
                   <img
-                    src="https://placehold.co/600x400"
+                    src="/father.jpg"
                     className="w-[80px] h-[80px] object-cover rounded-full mr-3"
                   />
                   <div className="flex-1">
-                    <h1>Parent Name</h1>
-                    <h3>Adress</h3>
-                    <h3>Phone Number</h3>
+                    <h1>Eshetu Tufa</h1>
+                    <h3>Bishoftu</h3>
+                    <h3>0911033253</h3>
                   </div>
                 </div>
                 <div className="flex-1 flex mt-3">
                   <div className="h-[100%]">
                     <img
-                      src="https://placehold.co/600x400"
+                      src="/id.jpg"
                       className="w-[160px] h-[70%] object-cover mr-3"
                     />
 
-                    <h2>Report Card</h2>
-                  </div>
-                  <div className="h-[100%]">
-                    <img
-                      src="https://placehold.co/600x400"
-                      className="w-[160px] h-[70%] object-cover mr-3"
-                    />
-
-                    <h2>Ministry Card</h2>
-                  </div>
-                  <div className="h-[100%]">
-                    <img
-                      src="https://placehold.co/600x400"
-                      className="w-[160px] h-[70%] object-cover mr-3"
-                    />
-
-                    <h2>Transcript</h2>
+                    <h2>Id Card</h2>
                   </div>
                 </div>
               </div>
