@@ -9,13 +9,14 @@ const SlideShower = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <div className="w-[90%] h-[80%] m-auto">
       <h2 className="my-[10px] text-2xl"> Registered Students</h2>
       <Slider {...settings} className="shadow-lg">
-        <div className="h-[70vh] p-3">
+        <div className="h-[75vh] p-3">
           <div className="flex flex-row ">
-            <div className="flex-1 h-[70vh]">
+            <div className="flex-1 h-[60vh]">
               <h1 className="text-xl">Student Details</h1>
               <div className="flex flex-col h-[70vh]">
                 <div className="flex">
@@ -57,7 +58,7 @@ const SlideShower = () => {
                 </div>
               </div>
             </div>
-            <div className="flex-1 h-[70vh]">
+            <div className="flex-1 h-[60vh]">
               <h1 className="text-xl">Parent Details</h1>
               <div className="flex flex-col h-[70vh]">
                 <div className="flex">
@@ -83,6 +84,14 @@ const SlideShower = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="flex mt-5">
+            <button className="p-2 mr-3 bg-green-500 text-white rounded-lg">
+              Approve
+            </button>
+            <button className="p-2 mr-3 bg-red-500 text-white rounded-lg">
+              Deny
+            </button>
           </div>
         </div>
         <div>
