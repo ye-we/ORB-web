@@ -37,7 +37,7 @@ const SlideShower = () => {
       grade: "Amharic 4",
       img: "/emebet.jpg",
       id: "s-1678680690929",
-      father: "Gossa Hunde",
+      father: "wibit mekonen",
       phoneNumber: "0978786426",
       location: "Ambo",
       parentImg: "/mom.jpg",
@@ -129,22 +129,6 @@ const SlideShower = () => {
             </div>
           </div>
         ))}
-
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
       </Slider>
     </div>
   );
