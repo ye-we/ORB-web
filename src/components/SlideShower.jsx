@@ -1,5 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
 import Slider from "react-slick";
+
+const studentsInit = [
+  {
+    name: "Kalkidan Eshetu",
+    grade: "11",
+    img: "/kal.jpg",
+    id: "s-1678680690929",
+    father: "Eshetu Tufa",
+    phoneNumber: "0911033253",
+    location: "Bishoftu",
+    parentImg: "/father.jpg",
+  },
+  {
+    name: "Fenet gossa",
+    grade: "9",
+    img: "/fenet.jpg",
+    id: "s-1678680690929",
+    father: "Gossa Hunde",
+    phoneNumber: "0978786426",
+    location: "Ambo",
+    parentImg: "/father.jpg",
+  },
+
+  {
+    name: "Emebet Haylu",
+    grade: "4",
+    img: "/emebet.jpg",
+    id: "s-1678680690929",
+    father: "wibit mekonen",
+    phoneNumber: "0978786426",
+    location: "Ambo",
+    parentImg: "/mom.jpg",
+  },
+];
 
 const SlideShower = () => {
   const settings = {
@@ -9,40 +43,13 @@ const SlideShower = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
-
-  const students = [
-    {
-      name: "Kalkidan Eshetu",
-      grade: "Amharic 11",
-      img: "/kal.jpg",
-      id: "s-1678680690929",
-      father: "Eshetu Tufa",
-      phoneNumber: "0911033253",
-      location: "Bishoftu",
-      parentImg: "/father.jpg",
-    },
-    {
-      name: "Fenet gossa",
-      grade: "Afaan Oromo 9",
-      img: "/fenet.jpg",
-      id: "s-1678680690929",
-      father: "Gossa Hunde",
-      phoneNumber: "0978786426",
-      location: "Ambo",
-      parentImg: "/father.jpg",
-    },
-
-    {
-      name: "Emebet Haylu",
-      grade: "Amharic 4",
-      img: "/emebet.jpg",
-      id: "s-1678680690929",
-      father: "wibit mekonen",
-      phoneNumber: "0978786426",
-      location: "Ambo",
-      parentImg: "/mom.jpg",
-    },
-  ];
+  const [students, setStudents] = useState(studentsInit);
+  const handleStudent = (studentId) => {
+    let newStudentsList = students.filter(
+      (student) => student.id !== studentId
+    );
+    setStudents(newStudentsList);
+  };
   return (
     <div className="w-[90%] h-[80%] m-auto">
       <h2 className="my-[10px] text-2xl"> Registered Students</h2>
@@ -118,14 +125,6 @@ const SlideShower = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="flex mt-5">
-              <button className="p-2 mr-3 bg-green-500 text-white rounded-lg">
-                Approve
-              </button>
-              <button className="p-2 mr-3 bg-red-500 text-white rounded-lg">
-                Deny
-              </button>
             </div>
           </div>
         ))}
