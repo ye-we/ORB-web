@@ -44,7 +44,7 @@ const SlideShower = (props) => {
     slidesToScroll: 1,
   };
   const [students, setStudents] = useState(studentsInit);
-  const handleStudent = (studentId) => {
+  const handleApprove = (studentId) => {
     let newStudentsList = students.filter(
       (student) => student.id !== studentId
     );
@@ -52,6 +52,12 @@ const SlideShower = (props) => {
     console.log(newStudentsList);
     setStudents(newStudentsList);
     props.onApprove(approvedStudent);
+  };
+  const handleDeny = (studentId) => {
+    let newStudentsList = students.filter(
+      (student) => student.id !== studentId
+    );
+    setStudents(newStudentsList);
   };
   return (
     <div className="w-[90%] h-[80%] m-auto">
@@ -133,7 +139,7 @@ const SlideShower = (props) => {
               <button
                 className="p-2 mr-3 bg-green-500 text-white rounded-lg"
                 onClick={() => {
-                  handleStudent(student.id);
+                  handleApprove(student.id);
                 }}
               >
                 Approve
@@ -141,7 +147,7 @@ const SlideShower = (props) => {
               <button
                 className="p-2 mr-3 bg-red-500 text-white rounded-lg"
                 onClick={() => {
-                  handleStudent(student.id);
+                  handleDeny(student.id);
                 }}
               >
                 Deny
