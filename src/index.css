@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.slick-arrow {
+  border-radius: 100%;
+}
+.slick-prev {
+  background: gray !important;
+  padding: "10px";
+}
+.slick-next {
+  padding: "10px";
+  background: gray !important;
+}
